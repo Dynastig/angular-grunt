@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         options: { livereload: true }
       },
       views: {
-        files: ['app/src/views/**/*.html'],
+        files: ['app/src/views/**/*.html', 'app/development.html'],
         options: { livereload: true }
       }
     },
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
     copy: {
       dist: {
         files: [
-          { src: 'app/index.html', dest: 'app/dist/' },
+          { src: 'index.html', dest: 'app/dist' },
           { expand: true, cwd: 'app/src/views', src: '**', dest: 'app/dist/views/' },
           { expand: true, cwd: 'app/assets', src: '**', dest: 'app/dist/assets/' }
         ]
@@ -63,9 +63,9 @@ module.exports = function(grunt) {
     },
 
     ngtemplates: {
-      myApp: {
+      glApp: {
         cwd: 'src',
-        src: 'app/src/views/**/*.html',
+        src: 'app/views/**/*.html',
         dest: 'app/dist/js/templates.js'
       }
     },
