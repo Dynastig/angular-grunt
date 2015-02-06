@@ -9,7 +9,7 @@
   <title>My AngularJS App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="dist/css/styles.css">
+  <link rel="stylesheet" href="/dev/css/styles.css">
 </head>
 <body>
   <ul class="menu">
@@ -23,9 +23,11 @@
 
   <div ng-view></div>
 
-  <div>Angular seed app</span></div>
+  <div>Angular seed app: v<span app-version></span></div>
 
-  <script src="dist/js/app.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="/dev/js/app.js"></script>
 
 </body>
 </html>
